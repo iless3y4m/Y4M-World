@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y4M — Personal Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="splash" id="splash">
+    <img src="y4m-text.png" alt="Y4M" />
+    <div class="splash-hint">Click or wait 3s</div>
+  </div>
+  <div class="app">
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">Y4M</div>
+        <div class="brand-sub">// Welcome 2 Y4M World</div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-target="profile">
+          <span class="nav-index">01</span>
+          <span class="nav-label">Bout ME</span>
+        </button>
+        <button class="nav-item" data-target="recommend">
+          <span class="nav-index">02</span>
+          <span class="nav-label">What I Need</span>
+        </button>
+        <button class="nav-item" data-target="works">
+          <span class="nav-index">03</span>
+          <span class="nav-label">Archive</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="player" id="player">
+          <div class="player-row">
+            <button class="player-play" id="playerPlay" type="button">▶</button>
+            <div class="np-text">
+              <span class="np-label">now playing</span>
+              <span class="np-title" id="npTitle">— nothing —</span>
+            </div>
+          </div>
+          <div class="player-time">
+            <span class="time-cur" id="timeCur">0:00</span>
+            <span class="time-total" id="timeTotal">0:00</span>
+          </div>
+          <div class="progress-wrap" id="progressWrap">
+            <div class="progress-bg"></div>
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="progress-thumb" id="progressThumb"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="content">
+      <!-- 个人信息 -->
+      <section class="panel active" id="profile">
+        <div class="reveal-container">
+          <img class="reveal-img reveal-bg" src="pt1.jpg" alt="" />
+          <img class="reveal-img reveal-top" id="revealTop" src="logo.png" alt="Y4M Logo" />
+        </div>
+        <div class="about-section">
+          <h2 class="about-title">关于<span class="accent">Y4M</span></h2>
+          <div class="about-body">
+            <p>Y4M,BORN 04</p>
+            <p>BeatMaker/Producer</p>
+            <p>Y4M会怎样？</p>
+            <p>iluv Y4M luv...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 音乐推荐 -->
+      <section class="panel" id="recommend">
+        <header class="panel-head">
+          <span class="panel-tag">02 / WHAT I NEED</span>
+          <h1 class="panel-title">Yes I<span class="accent"> Need</span></h1>
+          <p class="panel-sub">一些我爱的</p>
+        </header>
+
+        <div class="panel-body">
+          <ul class="track-list" id="trackList">
+            <!-- 由 JS 渲染 -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- 作品集 -->
+      <section class="panel" id="works">
+        <header class="panel-head">
+          <span class="panel-tag">03 / ARCHIVE</span>
+          <h1 class="panel-title">我做了<span class="accent">什么</span>？</h1>
+          <p class="panel-sub">一些demo，一些碎片，一些垃圾，一些记录</p>
+          <p class="panel-sub">我接受鞭策，建议，一些锐利的语言，更欢迎您的帮助</p>
+        </header>
+
+        <div class="panel-body">
+          <div class="albums-grid" id="albumsGrid">
+            <!-- 由 JS 渲染 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 底部联系方式 -->
+      <footer class="findme" id="findme">
+        <div class="findme-inner">
+          <div class="findme-title">
+            <span class="fm-hash">#</span> How 2 Find Y4M
+          </div>
+          <div class="contact-row">
+            <a class="contact-chip" href="mailto:2921062428@qq.com">
+              <span class="cc-key">Email</span>
+              <span class="cc-val">2921062428@qq.com</span>
+            </a>
+            <a class="contact-chip" href="https://music.163.com/#/artist?id=124888785" target="_blank" rel="noopener">
+              <span class="cc-key">Music</span>
+              <span class="cc-val">网易云音乐 · Y4M</span>
+            </a>
+            <button class="contact-chip" id="wechatChip" type="button" data-wechat="iless3y4m">
+              <span class="cc-key">WeChat</span>
+              <span class="cc-val">iless3y4m <span class="cc-hint">点击复制</span></span>
+            </button>
+          </div>
+
+          <div class="findme-foot">© <span id="year"></span> Y4M · Y4M Made It</div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
