@@ -288,6 +288,15 @@ const albums = [
       { title: "G", file: "Y4M - G.mp3" },
     ],
   },
+  {
+    title: "Rain,Shanghai",
+    cover: "albums/rain/RSHCOVER.jpg",
+    folder: "rain",
+    desc: "上海一直在下雨",
+    tracks: [
+      { title: "Rain,Shanghai", file: "Rain,Shanghai.mp3" },
+    ],
+  },
 ];
 
 let currentAlbumTrack = null;
