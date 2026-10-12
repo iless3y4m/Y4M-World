@@ -265,6 +265,21 @@ const albumsGrid = document.getElementById("albumsGrid");
 
 const albums = [
   {
+    title: "半年后的我",
+    cover: "albums/halfyear/Mimikyu.jpg",
+    folder: "halfyear",
+    desc: "26年7月至10月期间，我做了什么？",
+    tracks: [
+      { title: "PainMelody_Memphis", file: "PainMelody_Memphis.mp3" },
+      { title: "Roll it", file: "Roll it.mp3" },
+      { title: "2000s SWAG in Church", file: "2000s SWAG in Church.mp3" },
+      { title: "FIJI REMIX", file: "FIJI REMIX.mp3" },
+      { title: "0908_Drill_PRACT", file: "0908_Drill_PRACT.mp3" },
+      { title: "newjazz_swagshiii", file: "newjazz_swagshiii.mp3" },
+      { title: "CUT", file: "CUT.mp3" },
+    ],
+  },
+  {
     title: "Samurai？",
     cover: "albums/samurai/Samurai.png",
     folder: "samurai",
