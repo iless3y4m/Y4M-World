@@ -274,7 +274,7 @@ const albums = [
     ],
   },
   {
-    title: "半年后的我",
+    title: "After Half Year",
     cover: "albums/halfyear/Mimikyu.jpg",
     folder: "halfyear",
     desc: "26年7月至10月期间，我做了什么？",
