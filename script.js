@@ -265,6 +265,15 @@ const albumsGrid = document.getElementById("albumsGrid");
 
 const albums = [
   {
+    title: "亚特兰蒂斯",
+    cover: "albums/atlantis/亚特兰蒂斯.png",
+    folder: "atlantis",
+    desc: "Loop By Trick<br>Vocal/Tag By 白",
+    tracks: [
+      { title: "亚特兰蒂斯", file: "亚特兰蒂斯.mp3" },
+    ],
+  },
+  {
     title: "半年后的我",
     cover: "albums/halfyear/Mimikyu.jpg",
     folder: "halfyear",
