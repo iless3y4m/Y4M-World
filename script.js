@@ -468,30 +468,6 @@ navItems.forEach((item) => {
   item.addEventListener("click", () => switchTo(item.dataset.target));
 });
 
-// ============ Reveal 鼠标透视 ============
-const revealContainer = document.querySelector(".reveal-container");
-const revealTop = document.getElementById("revealTop");
-
-if (revealContainer && revealTop) {
-  const REVEAL_RADIUS = 84;
-  const MASK_GRADIENT = "transparent 55%, rgba(0,0,0,0.4) 75%, black 100%";
-
-  revealContainer.addEventListener("mousemove", (e) => {
-    const rect = revealContainer.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const mask = `radial-gradient(circle ${REVEAL_RADIUS}px at ${x}px ${y}px, ${MASK_GRADIENT})`;
-    revealTop.style.webkitMaskImage = mask;
-    revealTop.style.maskImage = mask;
-  });
-
-  revealContainer.addEventListener("mouseleave", () => {
-    const mask = `radial-gradient(circle ${REVEAL_RADIUS}px at -200px -200px, ${MASK_GRADIENT})`;
-    revealTop.style.webkitMaskImage = mask;
-    revealTop.style.maskImage = mask;
-  });
-}
-
 // ============ WeChat 复制 ============
 const wechatChip = document.getElementById("wechatChip");
 wechatChip.addEventListener("click", async () => {
